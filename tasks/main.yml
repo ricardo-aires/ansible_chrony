@@ -1,0 +1,31 @@
+---
+# tasks file for chrony_setup
+- name: ensure chrony is installed
+  yum:
+    name: chrony
+    state: present
+
+- name: ensure ntp servers are set
+  template:
+    src: chrony.conf.j2
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart chronyd
+
+
+- name: ensure chrony is running with user chrony
+  copy:
+    src: chronyd
+    dest: /etc/sysconfig/chronyd
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart chronyd
+
+- name: ensure chrony is running and enabled
+  service:
+    name: chronyd
+    state: started
+    enabled: yes
