@@ -8,11 +8,10 @@ This role was created using [Ansible 2.9](https://docs.ansible.com/ansible/2.9/)
 
 The [Ansible modules](https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html) used in the role are:
 
-- [include_tasks](https://docs.ansible.com/ansible/2.9/modules/include_tasks_module.html#include-tasks-module) - new in version 2.4, previously [include](https://docs.ansible.com/ansible/2.9/modules/include_module.html#include-module) was used;
-- [service](https://docs.ansible.com/ansible/2.9/modules/service_module.html#service-module)
-- [file](https://docs.ansible.com/ansible/2.9/modules/file_module.html#file-module)
-- [template](https://docs.ansible.com/ansible/2.9/modules/template_module.html#template-module)
 - [yum](https://docs.ansible.com/ansible/2.9/modules/yum_module.html#yum-module) - requires Python 2 and `yum` (for Python 3 see [dnf](https://docs.ansible.com/ansible/2.9/modules/dnf_module.html#dnf-module));
+- [template](https://docs.ansible.com/ansible/2.9/modules/template_module.html#template-module)
+- [copy](https://docs.ansible.com/ansible/2.9/modules/copy_module.html#copy-module)
+- [service](https://docs.ansible.com/ansible/2.9/modules/service_module.html#service-module)
 
 ## Role Variables
 
