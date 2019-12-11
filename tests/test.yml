@@ -5,4 +5,4 @@
   tasks:
     - name: apply chrony setup role
       include_role:
-        name: chrony_setup
+        name: ansible-chrony
