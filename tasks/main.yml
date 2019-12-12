@@ -5,7 +5,7 @@
     name: chrony
     state: present
 
-- name: ensure ntp servers are set
+- name: ensure ntp servers are set chrony.conf
   template:
     src: chrony.conf.j2
     dest: /etc/chrony.conf
@@ -14,8 +14,7 @@
     mode: '0644'
   notify: restart chronyd
 
-
-- name: ensure chrony is running with user chrony
+- name: ensure chrony is set to run with user chrony in chronyd file
   copy:
     src: chronyd
     dest: /etc/sysconfig/chronyd
