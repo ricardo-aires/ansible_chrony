@@ -1,5 +1,5 @@
 ---
-# defaults file for chrony_setup
+# defaults file for chrony
 chrony_ntp_servers:
   - 0.centos.pool.ntp.org
   - 1.centos.pool.ntp.org

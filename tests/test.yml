@@ -1,8 +1,9 @@
 ---
-- hosts: all
+- name: setup chrony
+  hosts: chrony
   become: true
 
   tasks:
     - name: apply chrony setup role
       include_role:
-        name: ansible-chrony
+        name: chrony

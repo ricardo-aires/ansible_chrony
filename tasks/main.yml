@@ -1,5 +1,5 @@
 ---
-# tasks file for chrony_setup
+# tasks file for chrony
 - name: ensure chrony is installed
   yum:
     name: chrony
@@ -23,8 +23,12 @@
     mode: '0644'
   notify: restart chronyd
 
+- name: Force all notified handlers to run at this point
+  meta: flush_handlers
+
 - name: ensure chrony is running and enabled
   service:
     name: chronyd
     state: started
     enabled: yes
+    daemon_reload: yes
